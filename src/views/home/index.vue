@@ -39,18 +39,22 @@
         <!-- 左侧区域 -->
         <div v-if="state.show" :class="`left-bar ${state.toolsBarShow && 'show-tools-bar'}`">
           <Menu :active-name="state.menuActive" accordion @on-select="showToolsBar" width="65px">
+            <!-- 模板 -->
             <MenuItem :name="1" class="menu-item">
               <Icon type="md-book" size="24" />
               <div>{{ $t('templates') }}</div>
             </MenuItem>
+            <!-- 元素 -->
             <MenuItem :name="2" class="menu-item">
               <Icon type="md-images" size="24" />
               <div>{{ $t('elements') }}</div>
             </MenuItem>
+            <!-- 卡通 -->
             <MenuItem :name="3" class="menu-item">
               <Icon type="ios-leaf-outline" size="24" />
               <div>{{ $t('material.cartoon') }}</div>
             </MenuItem>
+            <!-- 图层 -->
             <MenuItem :name="4" class="menu-item">
               <Icon type="md-reorder" size="24" />
               <div>{{ $t('layers') }}</div>
@@ -92,7 +96,7 @@
           </div>
         </div>
 
-        <!-- 属性区域 380-->
+        <!-- 右侧属性区域 380-->
         <div class="right-bar" v-show="state.attrBarShow">
           <div v-if="state.show" style="padding-top: 10px">
             <!-- 新增字体样式使用 -->
@@ -203,6 +207,8 @@ const state = reactive({
 onMounted(() => {
   // 初始化fabric
   const canvas = new fabric.Canvas('canvas', {
+    width: 1920,
+    height: 1080,
     fireRightClick: true, // 启用右键，button的数字为3
     stopContextMenu: true, // 禁止默认右键菜单
     controlsAboveOverlay: true, // 超出clipPath后仍然展示控制条

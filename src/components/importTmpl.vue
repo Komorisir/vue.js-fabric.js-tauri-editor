@@ -77,6 +77,7 @@ const state = reactive({
 canvasEditor.getMaterialType('template').then((list: materialTypeI[]) => {
   state.materialTypelist = [...list];
   state.materialist = list;
+  console.log('1234545-----', state);
 });
 
 // 插入文件

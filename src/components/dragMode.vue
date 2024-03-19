@@ -20,20 +20,6 @@ const switchMode = (val) => {
     canvasEditor.endDring();
   }
 };
-// const handleKeyDown = (e) => {
-//   if (status.value) return;
-//   if (e.code === 'Space') {
-//     status.value = true;
-//     canvas.editor.editorWorkspace.startDring();
-//   }
-// };
-// const handleKeyUp = (e) => {
-//   if (e.code === 'Space') {
-//     status.value = false;
-//     canvas.editor.editorWorkspace.endDring();
-//   }
-// };
-
 onMounted(() => {
   canvasEditor.on('startDring', () => (status.value = true));
   canvasEditor.on('endDring', () => (status.value = false));

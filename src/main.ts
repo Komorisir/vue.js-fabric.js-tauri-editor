@@ -4,6 +4,7 @@ import router from './router';
 import ViewUiPlus from 'view-ui-plus';
 import 'view-ui-plus/dist/styles/viewuiplus.css';
 import './styles/index.less';
+// vue 图片懒加载
 import VueLazyLoad from 'vue3-lazyload';
 // import { registerSW } from 'virtual:pwa-register';
 // 自定义字体文件

@@ -7,30 +7,25 @@
       </Button>
     </Tooltip>
 
-    <!-- 重做 -->
+    <!-- 恢复 -->
     <Tooltip :content="$t('history.redo') + `(${redoStack.length})`">
       <Button @click="redo" type="text" size="small" :disabled="redoStack.length === 0">
         <Icon type="ios-redo" size="20" />
       </Button>
     </Tooltip>
-
-    <span class="time" v-if="history.length">
-      {{ useDateFormat(history[0].timestamp, 'HH:mm:ss').value }}
-    </span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useDateFormat } from '@vueuse/core';
 import useSelect from '@/hooks/select';
 const { canvasEditor } = useSelect();
-const { history, redoStack, undoStack } = reactive(canvasEditor.getHistory());
+const { redoStack, undoStack } = reactive(canvasEditor.getHistory());
 
 // 后退
 const undo = () => {
   canvasEditor.undo();
 };
-// 重做
+// 恢复
 const redo = () => {
   canvasEditor.redo();
 };
@@ -41,9 +36,6 @@ span.active {
   svg.icon {
     fill: #2d8cf0;
   }
-}
-.time {
-  color: #c1c1c1;
 }
 </style>
 
