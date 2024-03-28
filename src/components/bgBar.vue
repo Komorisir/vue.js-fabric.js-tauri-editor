@@ -33,28 +33,44 @@ const { mixinState, canvasEditor } = useSelect();
 
 const colorList = [
   {
-    label: t('scenary_x', { number: 1 }),
-    color: ['#5F2B63', '#B23554', '#F27E56', '#FCE766'],
+    label: t('scenary', { colorSchemeName: '蓝天白云' }),
+    color: ['#00BFFF', '#87CEFA', '#ADD8E6', '#B0C4DE', '#B0E0E6', '#AFEEEE', '#E0FFFF'],
   },
   {
-    label: t('scenary_x', { number: 2 }),
-    color: ['#86DCCD', '#E7FDCB', '#FFDC84', '#F57677'],
+    label: t('scenary', { colorSchemeName: '夏日阳光' }),
+    color: ['#FFD700', '#FFA500', '#FF6347', '#FF7F50', '#FF8C00', '#FF4500', '#FFA07A'],
   },
   {
-    label: t('scenary_x', { number: 3 }),
-    color: ['#5FC2C7', '#98DFE5', '#C2EFF3', '#DDFDFD'],
+    label: t('scenary', { colorSchemeName: '自然森林' }),
+    color: ['#228B22', '#008000', '#006400', '#32CD32', '#00FF7F', '#7FFF00', '#9ACD32'],
   },
   {
-    label: t('scenary_x', { number: 4 }),
-    color: ['#9EE9D3', '#2FC6C8', '#2D7A9D', '#48466d'],
+    label: t('scenary', { colorSchemeName: '温暖秋天' }),
+    color: ['#FFA500', '#FF8C00', '#FF7F50', '#FF6347', '#FF4500', '#FF0000', '#8B0000'],
   },
   {
-    label: t('scenary_x', { number: 5 }),
-    color: ['#61c0bf', '#bbded6', '#fae3d9', '#ffb6b9'],
+    label: t('scenary', { colorSchemeName: '明亮春天' }),
+    color: ['#00FF00', '#7CFC00', '#ADFF2F', '#7FFF00', '#32CD32', '#00FA9A', '#00FF7F'],
   },
   {
-    label: t('scenary_x', { number: 6 }),
-    color: ['#ffaaa5', '#ffd3b6', '#dcedc1', '#a8e6cf'],
+    label: t('scenary', { colorSchemeName: '粉色浪漫' }),
+    color: ['#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF00FF', '#FFB6C1', '#FFC0CB'],
+  },
+  {
+    label: t('scenary', { colorSchemeName: '经典黑白' }),
+    color: ['#000000', '#808080', '#C0C0C0', '#FFFFFF', '#F5F5F5', '#DCDCDC', '#A9A9A9'],
+  },
+  {
+    label: t('scenary', { colorSchemeName: '海洋深蓝' }),
+    color: ['#000080', '#0000CD', '#00008B', '#191970', '#4169E1', '#0000FF', '#1E90FF'],
+  },
+  {
+    label: t('scenary', { colorSchemeName: '魅力紫夜' }),
+    color: ['#800080', '#8B008B', '#BA55D3', '#9400D3', '#9932CC', '#DB7093', '#DDA0DD'],
+  },
+  {
+    label: t('scenary', { colorSchemeName: '沙漠之旅' }),
+    color: ['#D2B48C', '#D2691E', '#8B4513', '#A52A2A', '#BC8F8F', '#DEB887', '#F4A460'],
   },
 ];
 
