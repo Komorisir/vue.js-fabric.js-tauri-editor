@@ -37,17 +37,17 @@
     "text": "WaterMark",
     "modalTitle": "WaterMark Setting",
     "setting": {
-        "name": "Mark Name",
-        "size": "MarK Size",
-        "angle": "Mark Angle",
-        "position": {
-            "label": "Mark Position",
-            "lt": "Left Top",
-            "rt": "Right Top",
-            "lb": "Left Bottom",
-            "rb": "Right Bottom",
-            "full": "Full"
-        }
+      "name": "Mark Name",
+      "size": "MarK Size",
+      "angle": "Mark Angle",
+      "position": {
+        "label": "Mark Position",
+        "lt": "Left Top",
+        "rt": "Right Top",
+        "lb": "Left Bottom",
+        "rb": "Right Bottom",
+        "full": "Full"
+      }
     }
   },
   "material": {
@@ -151,10 +151,10 @@
   "vintage": "vintage",
   "animals": "animals",
   "hand_painted": "hand painted",
-  "scenary_x": "Scenary {number}",
+  "scenary": "{colorSchemeName}",
   "color": "Color",
-  "red_book_vertical": "Red Book - V",
-  "red_book_horizontal": "Red Book - H",
+  "type_vertical": "vertical",
+  "type_horizontal": "horizontal",
   "phone_wallpaper": "Phone Wallpaper",
   "attributes": {
     "id": "ID",

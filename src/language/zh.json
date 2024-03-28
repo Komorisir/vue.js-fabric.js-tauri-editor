@@ -25,7 +25,7 @@
   "save_as_json": "保存为JSON",
   "layers": "图层",
   "title_template": "标题模板",
-  "insert_svg": "插入SVG元素",
+  "insert_svg": "导入SVG元素",
   "select_svg": "选择SVG文件",
   "please_choose": "请选择",
   "string": "字符串",
@@ -106,11 +106,11 @@
     "averageY": "垂直分布"
   },
   "insertFile": {
-    "insert": "插入",
-    "insert_picture": "插入图片",
-    "insert_SVG": "插入SVG元素",
-    "insert_SVGStr": "插入SVG字符",
-    "insert_PSD": "插入PSD",
+    "insert": "导入",
+    "insert_picture": "导入图片",
+    "insert_SVG": "导入SVG元素",
+    "insert_SVGStr": "导入SVG字符",
+    "insert_PSD": "导入PSD",
     "insert_SVGStr_placeholder": "请输入SVG字符串",
     "modal_tittle": "请输入"
   },
@@ -140,10 +140,10 @@
     "copied_sucessful": "复制成功",
     "fail_copy": "复制失败"
   },
-  "scenary_x": "方案 {number}",
+  "scenary": "{colorSchemeName}",
   "color": "颜色",
-  "red_book_vertical": "红书竖版",
-  "red_book_horizontal": "红书横版",
+  "type_vertical": "竖版",
+  "type_horizontal": "横版",
   "phone_wallpaper": "手机壁纸",
   "attributes": {
     "id": "标识",

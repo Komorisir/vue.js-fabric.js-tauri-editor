@@ -1,30 +1,39 @@
 <template>
   <div class="box">
-    <!-- 颜色开关 -->
-    <iSwitch v-model="isGradient" size="large" class="switch">
-      <template #open>
-        <span>渐变</span>
-      </template>
-      <template #close>
-        <span>纯色</span>
-      </template>
-    </iSwitch>
-    <!-- 渐变 -->
-    <div v-if="isGradient">
-      <div class="gradient-bar" :style="bgStr"></div>
-      <!-- 颜色插件 -->
+    <Row>
+      <!-- 颜色开关 -->
+      <iSwitch v-model="isGradient" size="large" class="switch">
+        <template #open>
+          <span>渐变</span>
+        </template>
+        <template #close>
+          <span>纯色</span>
+        </template>
+      </iSwitch>
+      <!-- 渐变 -->
+      <div v-if="isGradient">
+        <div class="gradient-bar" :style="bgStr"></div>
+        <!-- 颜色插件 -->
 
-      <gradientColorPicker
-        :is-gradient="true"
-        :gradient="currentGradient"
-        @change="changeGradientColor"
-        :cancel-text="$t('cancel')"
-        :confirm-text="$t('ok')"
+        <gradientColorPicker
+          :is-gradient="true"
+          :gradient="currentGradient"
+          @change="changeGradientColor"
+          :cancel-text="$t('cancel')"
+          :confirm-text="$t('ok')"
+        />
+      </div>
+
+      <!-- 纯色选择器 -->
+      <ColorPicker
+        class="colorPicker"
+        v-show="!isGradient"
+        v-model="fill"
+        @on-change="changePureColor"
+        alpha
+        size="small"
       />
-    </div>
-
-    <!-- 纯色选择器 -->
-    <ColorPicker v-show="!isGradient" v-model="fill" @on-change="changePureColor" alpha />
+    </Row>
   </div>
 </template>
 
@@ -231,7 +240,9 @@ onMounted(() => {
   cursor: pointer;
   border-radius: 5px;
 }
-
+.colorPicker {
+  padding-left: 20px;
+}
 .switch {
   margin-bottom: 10px;
 }
