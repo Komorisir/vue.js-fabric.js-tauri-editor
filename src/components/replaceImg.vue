@@ -1,6 +1,6 @@
 <template>
   <div v-if="mixinState.mSelectMode === 'one' && type === 'image'" class="box attr-item">
-    <Button @click="repleace" type="text" long>{{ $t('repleaceImg') }}</Button>
+    <Button @click="repleace" type="text" long>{{ $t('replaceImg') }}</Button>
   </div>
 </template>
 

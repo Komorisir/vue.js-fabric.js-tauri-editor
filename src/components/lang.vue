@@ -22,8 +22,11 @@ import { useI18n } from 'vue-i18n';
 const { locale } = useI18n();
 
 const LANGMAP = {
-  zh: '中文',
+  zh: '简体中文',
   en: 'English',
+  tw: '繁体中文',
+  pt: 'Português',
+  jp: '日本語',
 };
 
 let langList = reactive(

@@ -6,7 +6,7 @@
         <ColorPicker v-model="color" @on-change="setThisColor" alpha size="small" transfer />
       </FormItem>
     </Form>
-    <Divider orientation="left" plain>{{ $t('color_macthing') }}</Divider>
+    <Divider orientation="left" plain>{{ $t('color_matching') }}</Divider>
     <div class="color-list">
       <template v-for="(item, i) in colorList" :key="item.label + i">
         <div class="item">
