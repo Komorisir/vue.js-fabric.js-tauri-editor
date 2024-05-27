@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <Divider plain orientation="left">{{ $t('common_elements') }}</Divider>
+  <div style="display: inline-block">
     <div class="tool-box">
+      <Button type="text">
+        {{ $t('common_elements') }}
+      </Button>
       <span @click="() => addText()" :draggable="true" @dragend="onDragend('text')">
         <svg
           t="1650875455324"
@@ -105,9 +107,6 @@
           ></path>
         </svg>
       </span>
-    </div>
-    <Divider plain orientation="left">{{ $t('draw_elements') }}</Divider>
-    <div class="tool-box">
       <span
         @click="drawingLineModeSwitch(false)"
         :class="state.isDrawingLineMode && !state.isArrow && 'bg'"
@@ -375,14 +374,12 @@ onMounted(() => {
 
 <style scoped lang="less">
 .tool-box {
-  display: flex;
   justify-content: space-around;
   span {
     flex: 1;
     text-align: center;
     padding: 5px 0;
-    background: #f6f6f6;
-    margin-left: 2px;
+    margin-left: 8px;
     cursor: pointer;
     &:hover {
       background: #edf9ff;

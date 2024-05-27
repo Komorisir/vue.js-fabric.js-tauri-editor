@@ -48,6 +48,7 @@ const HANDLEMAP = {
   insertImg: function () {
     selectFiles({ accept: 'image/*', multiple: true }).then((fileList) => {
       Array.from(fileList).forEach((item) => {
+        console.log('sk--111', item, typeof item);
         getImgStr(item).then((file) => {
           insertImgFile(file);
         });

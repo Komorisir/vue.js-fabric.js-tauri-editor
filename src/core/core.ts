@@ -102,7 +102,7 @@ class Editor extends EventEmitter {
     });
   }
 
-  // 保存组件自定义事件与API
+  // 导出组件自定义事件与API
   private _saveCustomAttr(plugin: IPluginClass) {
     const { events = [], apis = [] } = plugin;
     this.customApis = this.customApis.concat(apis);

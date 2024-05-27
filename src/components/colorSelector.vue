@@ -163,7 +163,7 @@ const changeGradientColor = debounce(function (val) {
     // TODO:
     emitChange('change', currentGradient);
 
-    // 保存角度，用于下一次选中展示
+    // 导出角度，用于下一次选中展示
     activeObject.set(props.angleKey, gradient.degree);
     setGradientBar(val);
   }

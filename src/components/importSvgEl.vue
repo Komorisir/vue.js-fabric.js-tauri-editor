@@ -16,6 +16,7 @@
         @on-change="search"
       />
     </div>
+    <fontTmpl></fontTmpl>
 
     <div :key="item.value" v-for="item in state.materialist">
       <Divider plain orientation="left">{{ item.label }}</Divider>
@@ -39,6 +40,8 @@
 
 <script setup name="ImportSvg" lang="ts">
 import useSelect from '@/hooks/select';
+import fontTmpl from '@/components/fontTmpl.vue';
+
 import { cloneDeep } from 'lodash-es';
 import { v4 as uuid } from 'uuid';
 

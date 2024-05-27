@@ -25,11 +25,11 @@ class EditorWorkspacePlugin {
   destroy() {
     console.log('pluginDestroy');
   }
-  // 保存文件前
+  // 导出文件前
   hookSaveBefore() {
     console.log('pluginHookSaveBefore');
   }
-  // 保存文件前
+  // 导出文件前
   hookSaveAfter() {
     console.log('pluginHookSaveAfter');
   }

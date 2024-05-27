@@ -274,7 +274,7 @@ class AlignGuidLinePlugin {
     });
 
     canvas.on('before:render', () => {
-      // fix 保存图片时报错
+      // fix 导出图片时报错
       try {
         canvas.clearContext(canvas.contextTop);
       } catch (error) {

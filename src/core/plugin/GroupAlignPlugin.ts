@@ -14,6 +14,7 @@ class GroupAlignPlugin {
   }
 
   left() {
+    console.log('sk---111');
     const { canvas } = this;
     // const activeObject = canvas.getActiveObject();
     // if (activeObject && activeObject.type === 'activeSelection') {
@@ -79,6 +80,7 @@ class GroupAlignPlugin {
   }
 
   xcenter() {
+    console.log('sk---222');
     const { canvas } = this;
     // const activeObject = canvas.getActiveObject();
     // if (activeObject && activeObject.type === 'activeSelection') {

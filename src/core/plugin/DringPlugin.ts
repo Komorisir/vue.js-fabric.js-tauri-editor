@@ -58,6 +58,7 @@ class DringPlugin {
     });
 
     this.canvas.on('mouse:move', function (this: ExtCanvas, opt) {
+      console.log('0000');
       if (this.isDragging) {
         This.canvas.discardActiveObject();
         This.canvas.defaultCursor = 'grabbing';

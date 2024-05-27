@@ -229,10 +229,12 @@ function _createFilter(sourceImg, type, options = null) {
  * @private
  */
 function _getFilter(sourceImg, type) {
+  console.log('sourceImg, type', sourceImg, type);
   let imgFilter = null;
 
   if (sourceImg) {
     const fabricType = _getFabricFilterType(type);
+    console.log('fabricType---333', fabricType);
     const { length } = sourceImg.filters;
     let item, i;
 
