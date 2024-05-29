@@ -82,17 +82,6 @@ class GroupAlignPlugin {
   xcenter() {
     console.log('sk---222');
     const { canvas } = this;
-    // const activeObject = canvas.getActiveObject();
-    // if (activeObject && activeObject.type === 'activeSelection') {
-    //   const activeSelection = activeObject;
-    //   activeSelection.forEachObject((item) => {
-    //     item.set({
-    //       left: 0 - (item.width * item.scaleX) / 2,
-    //     });
-    //     item.setCoords();
-    //     canvas.renderAll();
-    //   });
-    // }
 
     const activeObject = canvas.getActiveObject();
     const selectObjects = canvas.getActiveObjects();
@@ -113,18 +102,6 @@ class GroupAlignPlugin {
 
   ycenter() {
     const { canvas } = this;
-    // const activeObject = canvas.getActiveObject();
-    // if (activeObject && activeObject.type === 'activeSelection') {
-    //   const activeSelection = activeObject;
-    //   activeSelection.forEachObject((item) => {
-    //     item.set({
-    //       top: 0 - (item.height * item.scaleY) / 2,
-    //     });
-    //     item.setCoords();
-    //     canvas.renderAll();
-    //   });
-    // }
-
     const activeObject = canvas.getActiveObject();
     const selectObjects = canvas.getActiveObjects();
     const { top, height } = activeObject;
@@ -144,19 +121,6 @@ class GroupAlignPlugin {
 
   top() {
     const { canvas } = this;
-    // const activeObject = canvas.getActiveObject();
-    // if (activeObject && activeObject.type === 'activeSelection') {
-    //   const activeSelection = activeObject;
-    //   const activeObjectTop = -(activeObject.height / 2);
-    //   activeSelection.forEachObject((item) => {
-    //     item.set({
-    //       top: activeObjectTop,
-    //     });
-    //     item.setCoords();
-    //     canvas.renderAll();
-    //   });
-    // }
-
     const activeObject = canvas.getActiveObject();
     const selectObjects = canvas.getActiveObjects();
     const { top } = activeObject;
@@ -176,19 +140,6 @@ class GroupAlignPlugin {
 
   bottom() {
     const { canvas } = this;
-    // const activeObject = canvas.getActiveObject();
-    // if (activeObject && activeObject.type === 'activeSelection') {
-    //   const activeSelection = activeObject;
-    //   const activeObjectTop = activeObject.height / 2;
-    //   activeSelection.forEachObject((item) => {
-    //     item.set({
-    //       top: activeObjectTop - item.height * item.scaleY,
-    //     });
-    //     item.setCoords();
-    //     canvas.renderAll();
-    //   });
-    // }
-
     const activeObject = canvas.getActiveObject();
     const selectObjects = canvas.getActiveObjects();
     const { top, height } = activeObject;

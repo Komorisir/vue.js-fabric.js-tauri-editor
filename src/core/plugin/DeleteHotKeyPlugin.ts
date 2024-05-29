@@ -1,7 +1,6 @@
 import { fabric } from 'fabric';
 import Editor from '../core';
 type IEditor = Editor;
-// import { v4 as uuid } from 'uuid';
 
 class DeleteHotKeyPlugin {
   public canvas: fabric.Canvas;

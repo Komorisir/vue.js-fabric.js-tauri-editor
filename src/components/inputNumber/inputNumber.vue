@@ -1,6 +1,70 @@
+<template>
+  <div :class="wrapClasses">
+    <template v-if="controlsOutside">
+      <div
+        class="ivu-input-number-controls-outside-btn ivu-input-number-controls-outside-down"
+        :class="{ 'ivu-input-number-controls-outside-btn-disabled': downDisabled }"
+        @mousedown="minus"
+        v-bind="clearRepeatTimerProps"
+      >
+        <i class="ivu-icon ivu-icon-ios-remove"></i>
+      </div>
+      <div
+        class="ivu-input-number-controls-outside-btn ivu-input-number-controls-outside-up"
+        :class="{ 'ivu-input-number-controls-outside-btn-disabled': upDisabled }"
+        @mousedown="plus"
+        v-bind="clearRepeatTimerProps"
+      >
+        <i class="ivu-icon ivu-icon-ios-add"></i>
+      </div>
+    </template>
+    <div :class="handlerClasses" v-else-if="!hideButton">
+      <a :class="upClasses" @mousedown="plus" v-bind="clearRepeatTimerProps">
+        <span :class="innerUpClasses"></span>
+      </a>
+      <a :class="downClasses" @mousedown="minus" v-bind="clearRepeatTimerProps">
+        <span :class="innerDownClasses"></span>
+      </a>
+    </div>
+    <div :class="inputWrapClasses">
+      <template v-if="$slots.prefix">
+        <slot name="prefix"></slot>
+      </template>
+      <label ref="appendLabelRef" :class="`${inputWrapClasses}__label`" v-else-if="append">
+        {{ append }}
+      </label>
+      <input
+        ref="inputRef"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        role="spinbutton"
+        :aria-valuemax="max"
+        :aria-valuemin="min"
+        :aria-valuenow="_value"
+        :value="_value"
+        :class="inputClasses"
+        :disabled="disabled"
+        :autofocus="autofocus"
+        :readonly="readonly"
+        :placeholder="placeholder"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @input="handleInput"
+        @change="handleChange"
+        @keydown="handleKeyDown"
+      />
+      <template v-if="$slots.suffix">
+        <slot name="suffix"></slot>
+      </template>
+      <label ref="prependLabelRef" :class="`${inputWrapClasses}__label`" v-else-if="prepend">
+        {{ prepend }}
+      </label>
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
-// https://github.com/view-design/ViewUIPlus/blob/master/src/components/input-number/input-number.vue
-// https://github.com/arco-design/arco-design-vue/blob/main/packages/web-vue/components/input-number/input-number.tsx
 import { usePointerSwipe, type MaybeRefOrGetter } from '@vueuse/core';
 import { isNumber, isUndefined } from 'lodash-es';
 import NP from 'number-precision';
@@ -420,72 +484,6 @@ defineExpose({
   },
 });
 </script>
-
-<template>
-  <div :class="wrapClasses">
-    <template v-if="controlsOutside">
-      <div
-        class="ivu-input-number-controls-outside-btn ivu-input-number-controls-outside-down"
-        :class="{ 'ivu-input-number-controls-outside-btn-disabled': downDisabled }"
-        @mousedown="minus"
-        v-bind="clearRepeatTimerProps"
-      >
-        <i class="ivu-icon ivu-icon-ios-remove"></i>
-      </div>
-      <div
-        class="ivu-input-number-controls-outside-btn ivu-input-number-controls-outside-up"
-        :class="{ 'ivu-input-number-controls-outside-btn-disabled': upDisabled }"
-        @mousedown="plus"
-        v-bind="clearRepeatTimerProps"
-      >
-        <i class="ivu-icon ivu-icon-ios-add"></i>
-      </div>
-    </template>
-    <div :class="handlerClasses" v-else-if="!hideButton">
-      <a :class="upClasses" @mousedown="plus" v-bind="clearRepeatTimerProps">
-        <span :class="innerUpClasses"></span>
-      </a>
-      <a :class="downClasses" @mousedown="minus" v-bind="clearRepeatTimerProps">
-        <span :class="innerDownClasses"></span>
-      </a>
-    </div>
-    <div :class="inputWrapClasses">
-      <template v-if="$slots.prefix">
-        <slot name="prefix"></slot>
-      </template>
-      <label ref="appendLabelRef" :class="`${inputWrapClasses}__label`" v-else-if="append">
-        {{ append }}
-      </label>
-      <input
-        ref="inputRef"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        role="spinbutton"
-        :aria-valuemax="max"
-        :aria-valuemin="min"
-        :aria-valuenow="_value"
-        :value="_value"
-        :class="inputClasses"
-        :disabled="disabled"
-        :autofocus="autofocus"
-        :readonly="readonly"
-        :placeholder="placeholder"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @input="handleInput"
-        @change="handleChange"
-        @keydown="handleKeyDown"
-      />
-      <template v-if="$slots.suffix">
-        <slot name="suffix"></slot>
-      </template>
-      <label ref="prependLabelRef" :class="`${inputWrapClasses}__label`" v-else-if="prepend">
-        {{ prepend }}
-      </label>
-    </div>
-  </div>
-</template>
 
 <style scoped lang="less">
 @import 'view-ui-plus/src/styles/custom.less';

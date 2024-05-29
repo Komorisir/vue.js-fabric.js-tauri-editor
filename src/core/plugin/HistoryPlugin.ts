@@ -3,7 +3,6 @@ import Editor from '../core';
 import { ref } from 'vue';
 import { useRefHistory } from '@vueuse/core';
 type IEditor = Editor;
-// import { v4 as uuid } from 'uuid';
 
 class HistoryPlugin {
   public canvas: fabric.Canvas;

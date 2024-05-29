@@ -228,21 +228,6 @@ onMounted(() => {
   state.show = true;
 });
 
-// 获取字体数据 新增字体样式使用
-// getFontJson() {
-//   const activeObject = this.canvas.getActiveObject();
-//   if (activeObject) {
-//     const json = activeObject.toJSON(['id', 'gradientAngle', 'selectable', 'hasControls']);
-//     console.log(json);
-//     const fileStr = `data:text/json;charset=utf-8,${encodeURIComponent(
-//       JSON.stringify(json, null, '\t')
-//     )}`;
-//     downFile(fileStr, 'font.json');
-//     const dataUrl = activeObject.toDataURL();
-//     downFile(dataUrl, 'font.png');
-//   }
-// },
-
 const rulerSwitch = (val) => {
   if (val) {
     canvasEditor.rulerEnable();

@@ -13,7 +13,6 @@ class DownFontPlugin {
   }
 
   hookImportBefore(json) {
-    // console.log(downFontByJSON(json).then, 111);
     return downFontByJSON(json);
   }
 

@@ -1,6 +1,5 @@
 import { fabric } from 'fabric';
 import Editor from '../core';
-// import { throttle } from 'lodash-es';
 type IEditor = Editor;
 
 import initRuler from '@/core/ruler';
@@ -9,7 +8,6 @@ class RulerPlugin {
   public canvas: fabric.Canvas;
   public editor: IEditor;
   static pluginName = 'RulerPlugin';
-  // static events = ['sizeChange'];
   static apis = ['hideGuideline', 'showGuideline', 'rulerEnable', 'rulerDisable'];
   ruler: any;
   constructor(canvas: fabric.Canvas, editor: IEditor) {

@@ -429,20 +429,6 @@ class CanvasRuler {
     // draw end
   }
 
-  /**
-   * 计算起始点
-   */
-  // private calcCalibration() {
-  //   if (this.startCalibration) return;
-  //   // console.log('calcCalibration');
-  //   const workspace = this.options.canvas.getObjects().find((item: any) => {
-  //     return item.id === 'workspace';
-  //   });
-  //   if (!workspace) return;
-  //   const rect = workspace.getBoundingRect(false);
-  //   this.startCalibration = new fabric.Point(-rect.left, -rect.top).divide(this.getZoom());
-  // }
-
   private calcObjectRect() {
     const activeObjects = this.options.canvas.getActiveObjects();
     if (activeObjects.length === 0) return;

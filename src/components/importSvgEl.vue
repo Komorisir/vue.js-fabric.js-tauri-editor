@@ -173,8 +173,5 @@ const addItem = (e: { target: { src: any } }) => {
   background: #f5f5f5;
   padding: 6px;
   cursor: pointer;
-  // width: 135px;
-  // cursor: pointer;
-  // margin-right: 5px;
 }
 </style>

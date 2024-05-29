@@ -111,12 +111,6 @@ onMounted(() => {
     width.value = width;
     height.value = height;
   });
-
-  // canvas.editor.editorWorkspace.setSize(width.value, height.value);
-  // canvas.editor.editorWorkspace = new EditorWorkspace(canvas.c, {
-  //   width: width.value,
-  //   height: height.value,
-  // });
 });
 
 const setSizeBy = (w, h) => {
@@ -125,7 +119,6 @@ const setSizeBy = (w, h) => {
 };
 const setSize = () => {
   canvasEditor.setSize(width.value, height.value);
-  // canvas.editor.editorWorkspace.setSize(width.value, height.value);
 };
 
 const handleClose = () => {

@@ -1,10 +1,3 @@
-<!--
- * @Author: June
- * @Description:
- * @Date: 2023-11-01 11:54:10
- * @LastEditors: June
- * @LastEditTime: 2023-11-04 16:11:12
--->
 <template>
   <Button type="text" @click="addWaterMark">
     {{ $t('waterMark.text') }}

@@ -1,7 +1,5 @@
 <template>
   <div class="attr-item box" v-if="isMultiple || isGroup">
-    <!-- <ButtonGroup size="small" v-if="isMultiple || isGroup"> -->
-    <!-- 组合按钮 多选时不可用 -->
     <Button v-if="isMultiple" :disabled="!isMultiple" @click="group" type="text">
       <svg
         t="1650848913991"
